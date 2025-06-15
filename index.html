@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ritesh Dangi | Portfolio</title>
+  <title>Ritesh | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --primary: #007acc;
+      --primary: #000;
       --secondary: #f5f5f5;
       --dark: #1a1a1a;
       --light: #ffffff;
       --accent: #00d1b2;
-      --transition: 0.3s;
+      --transition: 0.2s;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
@@ -53,13 +53,49 @@
     /* Animations */
     @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
     @keyframes scaleIn { from { opacity: 0; transform: scale(0.8); } to { opacity: 1; transform: scale(1); } }
-    @media(max-width: 768px) { nav ul { display: none; } }
+    @media(max-width: 731px) { nav ul { display: none; } }
+    @media (max-width: 731px) {
+  /* make the profile image a square with rounded corners + shadow */
+  .intro img {
+    width: 300px;       /* fix a square size (adjust as you like) */
+    height: 200px;
+    border-radius: 14px; /* rounded corners */
+     box-shadow:
+      0 4px 10px rgba(0, 0, 0, 0.15),
+      0 8px 20px rgba(0, 0, 0, 0.2),
+      0 12px 30px rgba(0, 0, 0, 0.25);
+      
+    object-fit: cover;   /* crop to fill the square */
+    margin: 1rem auto;   /* center horizontally & add top/bottom space *
+  
+  /* Stack intro text and image vertically and center */
+  .intro {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .intro img {
+    margin: 1.5rem auto 0;
+  }
+  /* Center skill cards and projects */
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  /* Make each card full-width up to a max, and center its contents */
+  .card {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
   </style>
 </head>
 <body>
   <header>
     <nav>
-      <div class="logo">Ritesh Dangi</div>
+      <div class="logo">Ritesh</div>
       <ul id="nav-list">
         <li><a href="#about" class="active">About</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -75,36 +111,68 @@
       <div class="intro">
         <div class="text">
           <h1>Hi, I'm <span style="color: var(--accent);">Ritesh</span></h1>
+          
+          <br>
           <p>System & Data Administrator at Simbi Labs India, AI/ML Enthusiast, and Full-Stack Python Developer crafting scalable solutions and data-driven insights.</p>
           <a href="#projects" class="btn">See My Work</a>
         </div>
 <!--         <img src="https://via.placeholder.com/320" alt="Ritesh Photo" /> -->
-        <img src="images/ritesh3.jpg" alt="Ritesh Photo" />
       </div>
     </section>
 
     <section id="skills">
-      <h2>My Skills</h2>
+      <h2>My Core</h2>
       <div class="cards">
         <div class="card">
-          <h3>Python & Automation</h3>
+          <h3>Programming Languages</h3>
           <div class="skills-bar"><span>Python</span><div class="bar"><div class="bar-inner" style="width:90%"></div></div></div>
-          <div class="skills-bar"><span>Automation</span><div class="bar"><div class="bar-inner" style="width:85%"></div></div></div>
+          <div class="skills-bar"><span>SQL</span><div class="bar"><div class="bar-inner" style="width:80%"></div></div></div>
+          <div class="skills-bar"><span>HTML / CSS</span><div class="bar"><div class="bar-inner" style="width:50%"></div></div></div>
+          <div class="skills-bar"><span>JavaScript</span><div class="bar"><div class="bar-inner" style="width:40%"></div></div></div>
         </div>
         <div class="card">
-          <h3>AI & ML</h3>
-          <div class="skills-bar"><span>TensorFlow</span><div class="bar"><div class="bar-inner" style="width:80%"></div></div></div>
-          <div class="skills-bar"><span>Scikit-Learn</span><div class="bar"><div class="bar-inner" style="width:75%"></div></div></div>
+          <h3>AI & Automation</h3>
+          <div class="skills-bar"><span>Selenium / Playwright</span><div class="bar"><div class="bar-inner" style="width:80%"></div></div></div>
+          <div class="skills-bar"><span>Scikit-Learn</span><div class="bar"><div class="bar-inner" style="width:30%"></div></div></div>
+          <div class="skills-bar"><span>PyTorch</span><div class="bar"><div class="bar-inner" style="width:30%"></div></div></div>
+          <div class="skills-bar"><span>Transformers (Hugging Face)</span><div class="bar"><div class="bar-inner" style="width:70%"></div></div></div>
         </div>
         <div class="card">
-          <h3>Databases</h3>
-          <div class="skills-bar"><span>MySQL & Oracle</span><div class="bar"><div class="bar-inner" style="width:85%"></div></div></div>
+          <h3>Development</h3>
+          <div class="skills-bar"><span>Django</span><div class="bar"><div class="bar-inner" style="width:70%"></div></div></div>
+          <div class="skills-bar"><span>Flask / Fast API</span><div class="bar"><div class="bar-inner" style="width:60%"></div></div></div>
+           <div class="skills-bar"><span>IBM WatsonX</span><div class="bar"><div class="bar-inner" style="width:40%"></div></div></div> 
+           <div class="skills-bar"><span>PyQt / Tkinter / Kivy</span><div class="bar"><div class="bar-inner" style="width:70%"></div></div></div>
         </div>
+        
+        <div class="card">
+          <h3>Data & Databases</h3>
+          <div class="skills-bar"><span>MySQL / PostgreSQL</span><div class="bar"><div class="bar-inner" style="width:75%"></div></div></div>
+          <div class="skills-bar"><span>Numpy / Pandas</span><div class="bar"><div class="bar-inner" style="width:85%"></div></div></div>
+          <div class="skills-bar"><span>Matplotlib / Seaborn</span><div class="bar"><div class="bar-inner" style="width:85%"></div></div></div>
+          <div class="skills-bar"><span>GIT</span><div class="bar"><div class="bar-inner" style="width:70%"></div></div></div>
+        </div>
+        <div class="card">
+          <h3>Productive</h3>
+          <div class="skills-bar"><span>Google Workspace Suite</span><div class="bar"><div class="bar-inner" style="width:70%"></div></div></div>
+          <div class="skills-bar"><span>Meta Ads</span><div class="bar"><div class="bar-inner" style="width:60%"></div></div></div>
+          
+           <div class="skills-bar"><span>MS Office Suit</span><div class="bar"><div class="bar-inner" style="width:60%"></div></div></div>
+        </div>
+        
+        
         <div class="card">
           <h3>Web Development</h3>
           <div class="skills-bar"><span>HTML & CSS</span><div class="bar"><div class="bar-inner" style="width:90%"></div></div></div>
           <div class="skills-bar"><span>JavaScript</span><div class="bar"><div class="bar-inner" style="width:80%"></div></div></div>
         </div>
+        
+        <div class="card">
+          <h3>Web Development</h3>
+          <div class="skills-bar"><span>HTML & CSS</span><div class="bar"><div class="bar-inner" style="width:90%"></div></div></div>
+          <div class="skills-bar"><span>JavaScript</span><div class="bar"><div class="bar-inner" style="width:80%"></div></div></div>
+        </div>
+        
       </div>
     </section>
 
@@ -183,5 +251,57 @@
     }, options);
     skillBars.forEach(bar => revealOnScroll.observe(bar));
   </script>
+  
+  
+  <!-- START: Responsive Image Swap -->
+<style>
+  /* Shared styling for both copies */
+  .profile-img {
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow:
+      0 4px 10px rgba(0, 0, 0, 0.15),
+      0 8px 20px rgba(0, 0, 0, 0.2),
+      0 12px 30px rgba(0, 0, 0, 0.25);
+  }
+  /* Desktop copy: visible by default */
+  .desktop-only { display: block; }
+  .mobile-only  { display: none; }
+
+  @media (max-width: 731px) {
+    /* Swap visibility */
+    .desktop-only { display: none; }
+    .mobile-only  { 
+      display: block;
+      width: 200px;
+      height: 200px;
+      margin: 1rem auto;
+    }
+    /* Make intro stack vertically & center on mobile */
+    .intro {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const intro = document.querySelector('.intro');
+    const desktopImg = document.createElement('img');
+    desktopImg.src  = 'images/ritesh3.jpg';
+    desktopImg.alt  = 'Ritesh Photo';
+    desktopImg.classList.add('profile-img', 'desktop-only');
+    intro.appendChild(desktopImg);
+
+    const mobileCopy = document.createElement('img');
+    mobileCopy.src  = 'images/ritesh3.jpg';
+    mobileCopy.alt  = 'Ritesh Photo';
+    mobileCopy.classList.add('profile-img', 'mobile-only');
+    // insert right after the H1:
+    const heading = intro.querySelector('.text h1');
+    heading.insertAdjacentElement('afterend', mobileCopy);
+  });
+</script>
 </body>
 </html>
