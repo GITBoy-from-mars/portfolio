@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ritesh Dangi | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #007acc;
+      --secondary: #f5f5f5;
+      --dark: #1a1a1a;
+      --light: #ffffff;
+      --accent: #00d1b2;
+      --transition: 0.3s;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Poppins', sans-serif; background: var(--secondary); color: var(--dark); }
+    header {
+      position: fixed; width: 100%; background: rgba(255,255,255,0.8); backdrop-filter: blur(8px); z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    nav { max-width: 1200px; margin: auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; }
+    .logo { font-weight: 700; font-size: 1.4rem; color: var(--primary); }
+    nav ul { list-style: none; display: flex; gap: 2rem; }
+    nav ul li a { text-decoration: none; color: var(--dark); font-weight: 500; position: relative; }
+    nav ul li a::after { content: ''; position: absolute; height: 2px; width: 0; bottom: -4px; left: 0; background: var(--primary); transition: width var(--transition); }
+    nav ul li a:hover::after, nav ul li a.active::after { width: 100%; }
+    section { padding: 120px 2rem 60px; max-width: 1200px; margin: auto; }
+    .intro { display: flex; flex-wrap: wrap; align-items: center; gap: 2rem; }
+    .intro .text { flex: 2; animation: fadeIn 1s ease-out; }
+    .intro .text h1 { font-size: 3rem; margin-bottom: 0.5rem; }
+    .intro .text p { font-size: 1.1rem; margin-bottom: 1.5rem; }
+    .intro img { flex: 1; max-width: 320px; border-radius: 50%; border: 5px solid var(--primary); animation: scaleIn 1s ease-out; }
+    .btn { display: inline-block; padding: 0.75rem 1.5rem; background: var(--primary); color: var(--light); border-radius: 50px; text-decoration: none; font-weight: 600; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: background var(--transition), transform var(--transition); }
+    .btn:hover { background: var(--accent); transform: translateY(-3px); }
+    h2 { text-align: center; font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--primary); position: relative; }
+    h2::after { content: ''; display: block; width: 80px; height: 4px; background: var(--accent); margin: 0.5rem auto 0; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem; }
+    .card { background: var(--light); border-radius: 16px; padding: 2rem; box-shadow: 0 6px 20px rgba(0,0,0,0.05); transition: transform var(--transition), box-shadow var(--transition); }
+    .card:hover { transform: translateY(-8px); box-shadow: 0 12px 30px rgba(0,0,0,0.1); }
+    .card h3 { margin-bottom: 1rem; font-size: 1.25rem; color: var(--dark); }
+    .card p, .card ul { margin-bottom: 1rem; font-size: 0.95rem; }
+    .skills-bar { margin: 1rem 0; }
+    .skills-bar span { display: block; margin-bottom: 0.5rem; font-weight: 500; }
+    .bar { background: #e0e0e0; border-radius: 50px; overflow: hidden; height: 12px; }
+    .bar-inner { height: 100%; width: 0; background: var(--primary); border-radius: 50px; transition: width 1.5s ease-in-out; }
+    .grid { display: grid; gap: 1rem; justify-content: center; grid-auto-flow: column; }
+    .contact .btn { margin: 0.5rem; }
+    footer { text-align: center; padding: 2rem 1rem; background: var(--dark); color: var(--light); }
+
+    /* Animations */
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes scaleIn { from { opacity: 0; transform: scale(0.8); } to { opacity: 1; transform: scale(1); } }
+    @media(max-width: 768px) { nav ul { display: none; } }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Ritesh Dangi</div>
+      <ul id="nav-list">
+        <li><a href="#about" class="active">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <div class="intro">
+        <div class="text">
+          <h1>Hi, I'm <span style="color: var(--accent);">Ritesh</span></h1>
+          <p>System & Data Administrator at Simbi Labs India, AI/ML Enthusiast, and Full-Stack Python Developer crafting scalable solutions and data-driven insights.</p>
+          <a href="#projects" class="btn">See My Work</a>
+        </div>
+        <img src="https://via.placeholder.com/320" alt="Ritesh Photo" />
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>My Skills</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Python & Automation</h3>
+          <div class="skills-bar"><span>Python</span><div class="bar"><div class="bar-inner" style="width:90%"></div></div></div>
+          <div class="skills-bar"><span>Automation</span><div class="bar"><div class="bar-inner" style="width:85%"></div></div></div>
+        </div>
+        <div class="card">
+          <h3>AI & ML</h3>
+          <div class="skills-bar"><span>TensorFlow</span><div class="bar"><div class="bar-inner" style="width:80%"></div></div></div>
+          <div class="skills-bar"><span>Scikit-Learn</span><div class="bar"><div class="bar-inner" style="width:75%"></div></div></div>
+        </div>
+        <div class="card">
+          <h3>Databases</h3>
+          <div class="skills-bar"><span>MySQL & Oracle</span><div class="bar"><div class="bar-inner" style="width:85%"></div></div></div>
+        </div>
+        <div class="card">
+          <h3>Web Development</h3>
+          <div class="skills-bar"><span>HTML & CSS</span><div class="bar"><div class="bar-inner" style="width:90%"></div></div></div>
+          <div class="skills-bar"><span>JavaScript</span><div class="bar"><div class="bar-inner" style="width:80%"></div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Sys/Data Admin</h3>
+          <p><strong>Simbi Labs India</strong> | Jul 2023 - Present</p>
+          <ul>
+            <li>Led IT infrastructure management & data governance</li>
+            <li>Developed Python pipelines for data collection & analysis</li>
+            <li>Optimized website performance and SEO strategies</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects Showcase</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Data Recovery App</h3>
+          <p>ADB & Python tool to recover deleted KoboToolbox data</p>
+          <a href="https://github.com/GITBoy-from-mars/Lost-Data-Collecting-recovery-app" class="btn">GitHub</a>
+        </div>
+        <div class="card">
+          <h3>Form Automation</h3>
+          <p>Selenium-based automation for MS Word & web forms</p>
+          <a href="https://github.com/GITBoy-from-mars/Automated-Form-filling" class="btn">GitHub</a>
+        </div>
+        <div class="card">
+          <h3>Word to PDF Converter</h3>
+          <p>PyQt5 application with watermark & header support</p>
+          <a href="https://github.com/GITBoy-from-mars/Word-to-pdf-conversion" class="btn">GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Get In Touch</h2>
+      <p style="text-align:center; margin-bottom:1rem;">Let's collaborate on impactful projects or discuss new opportunities.</p>
+      <div class="grid">
+        <a href="mailto:riteshrajpoot0007@gmail.com" class="btn">Email Me</a>
+        <a href="https://www.linkedin.com/in/ritesh-dangi-4a4612273/" class="btn">LinkedIn</a>
+        <a href="https://github.com/GITBoy-from-mars" class="btn">GitHub</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Ritesh Dangi. Crafted with Passion &amp; Precision.</p>
+  </footer>
+
+  <script>
+    // Navigation active link
+    const navLinks = document.querySelectorAll('nav ul li a');
+    window.addEventListener('scroll', () => {
+      let scrollPos = window.scrollY + 150;
+      navLinks.forEach(link => {
+        let section = document.querySelector(link.hash);
+        if (section.offsetTop <= scrollPos && section.offsetTop + section.offsetHeight > scrollPos) {
+          link.classList.add('active');
+        } else link.classList.remove('active');
+      });
+    });
+    // Animate skill bars when in view
+    const skillBars = document.querySelectorAll('.bar-inner');
+    const options = { threshold: 0.5 };
+    const revealOnScroll = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.width = entry.target.getAttribute('style').split('width:')[1];
+        }
+      });
+    }, options);
+    skillBars.forEach(bar => revealOnScroll.observe(bar));
+  </script>
+</body>
+</html>
