@@ -6,6 +6,26 @@
   <title>Ritesh | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
   <style>
+  
+  
+              .project-card {
+      position: relative; /* allow children to be positioned against this */
+      /* …existing styles… */
+    }
+
+    /* style the date block */
+    .project-card .date-meta {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      left: 1rem;
+      bottom: 5rem;
+      font-style: italic;
+      font-size: 0.85rem;
+      color: #555; 
+      
+    }
+
     :root {
       --primary: #000;
       --secondary: #f5f5f5;
@@ -82,14 +102,15 @@
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
+   
   }
   /* Make each card full-width up to a max, and center its contents */
   .card {
     width: 100%;
     max-width: 320px;
-  }
+    position: relative;
+  }  
 }
-
   </style>
 </head>
 <body>
@@ -141,7 +162,7 @@
           <h3>Development</h3>
           <div class="skills-bar"><span>Django</span><div class="bar"><div class="bar-inner" style="width:70%"></div></div></div>
           <div class="skills-bar"><span>Flask / Fast API</span><div class="bar"><div class="bar-inner" style="width:60%"></div></div></div>
-           <div class="skills-bar"><span>IBM WatsonX</span><div class="bar"><div class="bar-inner" style="width:40%"></div></div></div> 
+           <div class="skills-bar"><span>Chatbot / IBM WatsonX</span><div class="bar"><div class="bar-inner" style="width:40%"></div></div></div> 
            <div class="skills-bar"><span>PyQt / Tkinter / Kivy</span><div class="bar"><div class="bar-inner" style="width:70%"></div></div></div>
         </div>
         
@@ -153,10 +174,9 @@
           <div class="skills-bar"><span>GIT</span><div class="bar"><div class="bar-inner" style="width:70%"></div></div></div>
         </div>
         <div class="card">
-          <h3>Productive</h3>
+          <h3>Productive Apps</h3>
           <div class="skills-bar"><span>Google Workspace Suite</span><div class="bar"><div class="bar-inner" style="width:70%"></div></div></div>
           <div class="skills-bar"><span>Meta Ads</span><div class="bar"><div class="bar-inner" style="width:60%"></div></div></div>
-          
            <div class="skills-bar"><span>MS Office Suit</span><div class="bar"><div class="bar-inner" style="width:60%"></div></div></div>
         </div>
         
@@ -167,11 +187,7 @@
           <div class="skills-bar"><span>JavaScript</span><div class="bar"><div class="bar-inner" style="width:80%"></div></div></div>
         </div>
         
-        <div class="card">
-          <h3>Web Development</h3>
-          <div class="skills-bar"><span>HTML & CSS</span><div class="bar"><div class="bar-inner" style="width:90%"></div></div></div>
-          <div class="skills-bar"><span>JavaScript</span><div class="bar"><div class="bar-inner" style="width:80%"></div></div></div>
-        </div>
+
         
       </div>
     </section>
@@ -194,11 +210,232 @@
     <section id="projects">
       <h2>Projects Showcase</h2>
       <div class="cards">
-        <div class="card">
-          <h3>Data Recovery App</h3>
-          <p>ADB & Python tool to recover deleted KoboToolbox data</p>
-          <a href="https://github.com/GITBoy-from-mars/Lost-Data-Collecting-recovery-app" class="btn">GitHub</a>
-        </div>
+        
+        
+        
+
+     <div class="card project-card">
+      <h3><br>End‑to‑End XML → Excel → Consolidation Workflow</h3>
+
+      <!-- date in top-right -->
+      <div class="date-meta">Self built<br></div>
+
+      <h4>Automation workflow (Python)</h4>
+      <ul>
+        <li>ADB Extraction: Pulls .xml files from Android devices using ADB.</li>
+        <li>XML to Excel: Converts .xml to Excel, handling complex nested data.</li>
+        <li>Batch Processing: Supports multiple input folders for scalable conversion.</li>
+        <li>File Consolidation: Renames and merges Excel files into one master sheet.</li>
+        <li>Error Handling: Logs issues and handles missing tools or data gracefully.</li>
+        <li>Analysis-Ready Output: Produces clean, structured data for insights.</li>
+      </ul>
+
+
+      <div class="meta">
+        <h5>
+          <i>
+            Software: Python, Pandas, NumPy, etc<br>
+            Editor: Jupyter Notebook, Colab<br><br></i>
+           <a href="https://github.com/GITBoy-from-mars/Lost-Data-Collecting-recovery-app" class="btn">GitHub</a>
+        </h5>
+      </div>
+    </div>
+    
+    
+    
+    
+    
+         <div class="card project-card">
+      <h3><br>SPSS numeric Converter</h3>
+
+      <!-- date in top-right -->
+      <div class="date-meta">Self built<br></div>
+
+      <h4>Categorical Data to numeric for SPSS</h4>
+      <ul>
+        <li>Automated Conversion: Transforms categorical data in Excel files into numeric codes for SPSS.</li>
+        <li>Dual Output: Generates both a cleaned Excel file and a notation sheet for reference.</li>
+        <li>User-Friendly: Upload, convert, and download in a few clicks—no manual coding needed.</li>
+        <li>Built for Researchers: Developed during your fellowship to streamline repetitive SPSS prep.</li>
+        <li>Web-Integrated</li>
+      </ul>
+
+
+      <div class="meta">
+        <h5>
+          <i>
+            Software: Python, Pandas, NumPy, etc<br>
+            Editor: Jupyter Notebook, Colab<br><br></i>
+           <a href="https://github.com/GITBoy-from-mars/SPSS-numeric-convertor" class="btn">GitHub</a>
+           <a href="https://product.simbi.in" class="btn">Live </a>
+        </h5>
+      </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+        
+       
+ 
+     <div class="card project-card">
+      <h3><br>Data Recovery App</h3>
+
+      <!-- date in top-right -->
+      <div class="date-meta">AICTE amd EDUSKILLS| Feb 2024 – Mar 2024<br></div>
+
+      <h4>Gender‑Based Analysis (Python)</h4>
+      <ul>
+        <li>Doctor Visits: Analyzed frequency by gender</li>
+        <li>Illness Symptoms: Identified common symptoms for men vs. women</li>
+      </ul>
+      <h4>Age‑Based Analysis (Python)</h4>
+      <ul>
+        <li>Healthcare Visits: Frequency across age groups</li>
+        <li>Doctor Visits: Visit frequency by age</li>
+        <li>Illness Symptoms: Age‑specific symptom prevalence</li>
+      </ul>
+
+      <div class="meta">
+        <h5>
+          <i>
+            Software: Python, Pandas, NumPy, Matplotlib, Seaborn<br>
+            Editor: Jupyter Notebook<br><br></i>
+           <a href="https://github.com/GITBoy-from-mars/Automated-Form-filling" class="btn">GitHub</a>
+        </h5>
+      </div>
+    </div>
+ 
+ 
+ 
+     <div class="card project-card">
+      <h3><br>Data Recovery App</h3>
+
+      <!-- date in top-right -->
+      <div class="date-meta">AICTE amd EDUSKILLS| Feb 2024 – Mar 2024<br></div>
+
+      <h4>Gender‑Based Analysis (Python)</h4>
+      <ul>
+        <li>Doctor Visits: Analyzed frequency by gender</li>
+        <li>Illness Symptoms: Identified common symptoms for men vs. women</li>
+      </ul>
+      <h4>Age‑Based Analysis (Python)</h4>
+      <ul>
+        <li>Healthcare Visits: Frequency across age groups</li>
+        <li>Doctor Visits: Visit frequency by age</li>
+        <li>Illness Symptoms: Age‑specific symptom prevalence</li>
+      </ul>
+
+      <div class="meta">
+        <h5>
+          <i>
+            Software: Python, Pandas, NumPy, Matplotlib, Seaborn<br>
+            Editor: Jupyter Notebook<br><br></i>
+           <a href="https://github.com/GITBoy-from-mars/Automated-Form-filling" class="btn">GitHub</a>
+        </h5>
+      </div>
+    </div>
+    
+    
+    
+
+        <!-- Project 1 -->
+    <div class="card project-card">
+      <h3>Healthcare Analytics for Doctor Visits</h3>
+      <div class="date-meta">AICTE &amp; VIOS for Tech | February 2024 – March 2024</div>
+
+      <h4>Gender‑Based Analysis (Python)</h4>
+      <ul>
+        <li>Doctor Visits: Analyzed the frequency of doctor visits by gender</li>
+        <li>Illness Symptoms: Identified common illness symptoms experienced by men and women</li>
+      </ul>
+
+      <h4>Age‑Based Analysis (Python)</h4>
+      <ul>
+        <li>Healthcare Visits: Examined the frequency of healthcare visits across different age groups</li>
+        <li>Doctor Visits: Analyzed the frequency of doctor visits based on age</li>
+        <li>Illness Symptoms: Identified illness symptoms that are more prevalent at specific ages</li>
+      </ul>
+
+      <div class="meta">
+        <h5><i>
+          Software: Python, Pandas, Seaborn, NumPy, Matplotlib<br>
+          Editor: Jupyter Notebook<br><br></i>
+           <a href="https://github.com/GITBoy-from-mars/Automated-Form-filling" class="btn">GitHub</a></h5>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="card project-card">
+      <h3>AI‑Powered Chatbot</h3>
+      <div class="date-meta">IBM Skillbuild – AI/CLOUD | June 2024 – July 2024</div>
+
+      <p>
+        Developed and implemented an AI‑powered chatbot using IBM Watsonx Studio on an
+        educational and consultancy website to assist users in finding information more
+        efficiently and effectively. This led to increased engagement, satisfaction, and
+        deeper learning resource access.
+      </p>
+
+      <div class="meta">
+        <h5><i>
+          Technology: IBM Watsonx, Watsonx Assistant, Watsonx Studio<br><br></i>
+           <a href="https://github.com/GITBoy-from-mars/Automated-Form-filling" class="btn">GitHub</a>
+        </i></h5>
+      </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="card project-card">
+      <h3>Crypto Trends Analysis</h3>
+      <div class="date-meta">AICTE &amp; VIOS for Tech | February 2024 – March 2024</div>
+
+      <ul>
+        <li>Market Trends: Analyzed overall trends and patterns in the cryptocurrency market</li>
+        <li>Exchange Patterns: Identified patterns and behaviors in cryptocurrency exchanges</li>
+      </ul>
+
+      <div class="meta">
+        <h5><i>
+          Software: Python, Pandas, Seaborn, NumPy, Matplotlib<br>
+          Editor: Jupyter Notebook <br><br></i>
+           <a href="https://github.com/GITBoy-from-mars/Automated-Form-filling" class="btn">GitHub</a>
+        </h5>
+      </div>
+    </div>
+
+    <!-- Project 4 -->
+    <div class="card project-card">
+      <h3>Zero Energy Buildings Feasibility Study</h3>
+      <div class="date-meta">BTIRT (College Project)</div>
+
+      <p>This project studied Zero Energy Buildings (ZEBs) and Passive Solar Buildings (PSBs) to assess their practicality in resource‑limited areas, covering:</p>
+      <ul>
+        <li>Energy consumption analysis &amp; efficiency measures</li>
+        <li>Passive solar features &amp; thermal mass considerations</li>
+        <li>Economic feasibility, policy &amp; regulatory considerations</li>
+      </ul>
+
+      <div class="meta">
+        <h5><i>
+          Software: MS Excel, Google, Quillbot, Canva<br><br></i>
+           <a href="https://github.com/GITBoy-from-mars/Automated-Form-filling" class="btn">GitHub</a>
+        </h5>
+      </div>
+    </div>
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+        
+        
         <div class="card">
           <h3>Form Automation</h3>
           <p>Selenium-based automation for MS Word & web forms</p>
