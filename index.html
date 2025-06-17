@@ -7,8 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
   <style>
               .project-card {
-      position: relative; /* allow children to be positioned against this */
-      /* …existing styles… */
+      position: relative;
     }
 
     /* style the date block */
@@ -52,7 +51,7 @@
     .intro .text { flex: 2; animation: fadeIn 1s ease-out; }
     .intro .text h1 { font-size: 3rem; margin-bottom: 0.5rem; }
     .intro .text p { font-size: 1.1rem; margin-bottom: 1.5rem; }
-    .intro img { flex: 1; max-width: 320px; border-radius: 50%; border: 5px solid var(--primary); animation: scaleIn 1s ease-out; }
+    .intro img { flex: 1; max-width: 320px; border-radius: 70%; border: 2px solid var(--primary); animation: scaleIn 1s ease-out; }
     .btn { display: inline-block; padding: 0.75rem 1.5rem; background: var(--primary); color: var(--light); border-radius: 50px; text-decoration: none; font-weight: 600; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: background var(--transition), transform var(--transition); }
     .btn:hover { background: var(--accent); transform: translateY(-3px); }
     h2 { text-align: center; font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--primary); position: relative; }
@@ -77,9 +76,9 @@
     @media (max-width: 731px) {
   /* make the profile image a square with rounded corners + shadow */
   .intro img {
-    width: 300px;       /* fix a square size (adjust as you like) */
+    width: 300px;      
     height: 200px;
-    border-radius: 14px; /* rounded corners */
+    border-radius: 14px;
      box-shadow:
       0 4px 10px rgba(0, 0, 0, 0.15),
       0 8px 20px rgba(0, 0, 0, 0.2),
@@ -139,7 +138,6 @@
         <li><a href="#projects">Projects</a></li>
         <li><a href="#achievements">Achievements</a></li>
         <li><a href="#contact">Contact</a></li> 
-        <li class="mobile-only resume-btn"><a href="/path/to/your_resume.pdf" target="_blank">See My Resume</a> </li>
       </ul>
     </nav>
   </header>
@@ -154,7 +152,6 @@
           <p>System & Data Administrator at Simbi Labs India, AI/ML Enthusiast, and Full-Stack Python Developer crafting scalable solutions and data-driven insights.</p>
           <a href="#projects" class="btn">See My Work</a>
         </div>
-<!--         <img src="https://via.placeholder.com/320" alt="Ritesh Photo" /> -->
       </div>
     </section>
 
@@ -579,6 +576,13 @@
   });
 </script>
 
+<style>
+  @media (min-width: 732px) {
+    .intro img {
+      max-width: 420px !important;
+    }
+  }
+</style>
 
 </body>
 </html>
