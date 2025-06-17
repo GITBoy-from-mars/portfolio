@@ -163,14 +163,14 @@
           <div class="skills-bar"><span>Python</span><div class="bar"><div class="bar-inner" style="width:90%"></div></div></div>
           <div class="skills-bar"><span>SQL</span><div class="bar"><div class="bar-inner" style="width:80%"></div></div></div>
           <div class="skills-bar"><span>HTML / CSS</span><div class="bar"><div class="bar-inner" style="width:50%"></div></div></div>
-          <div class="skills-bar"><span>JavaScript</span><div class="bar"><div class="bar-inner" style="width:40%"></div></div></div>
+          <div class="skills-bar"><span>JavaScript</span><div class="bar"><div class="bar-inner" style="width:30%"></div></div></div>
         </div>
         <div class="card">
           <h3>AI & Automation</h3>
           <div class="skills-bar"><span>Selenium / Playwright</span><div class="bar"><div class="bar-inner" style="width:80%"></div></div></div>
           <div class="skills-bar"><span>Scikit-Learn</span><div class="bar"><div class="bar-inner" style="width:30%"></div></div></div>
           <div class="skills-bar"><span>PyTorch</span><div class="bar"><div class="bar-inner" style="width:30%"></div></div></div>
-          <div class="skills-bar"><span>Transformers (Hugging Face)</span><div class="bar"><div class="bar-inner" style="width:70%"></div></div></div>
+          <div class="skills-bar"><span>Transformers (Hugging Face)</span><div class="bar"><div class="bar-inner" style="width:60%"></div></div></div>
         </div>
         <div class="card">
           <h3>Development</h3>
@@ -189,16 +189,16 @@
         </div>
         <div class="card">
           <h3>Productive Apps</h3>
-          <div class="skills-bar"><span>Google Workspace Suite</span><div class="bar"><div class="bar-inner" style="width:70%"></div></div></div>
-          <div class="skills-bar"><span>Meta Ads</span><div class="bar"><div class="bar-inner" style="width:60%"></div></div></div>
-           <div class="skills-bar"><span>MS Office Suit</span><div class="bar"><div class="bar-inner" style="width:60%"></div></div></div>
+          <div class="skills-bar"><span>Google Workspace Suite</span><div class="bar"><div class="bar-inner" style="width:80%"></div></div></div>
+          <div class="skills-bar"><span>Meta Ads</span><div class="bar"><div class="bar-inner" style="width:80%"></div></div></div>
+           <div class="skills-bar"><span>MS Office Suit</span><div class="bar"><div class="bar-inner" style="width:80%"></div></div></div>
         </div>
         
         
         <div class="card">
           <h3>Web Development</h3>
-          <div class="skills-bar"><span>HTML & CSS</span><div class="bar"><div class="bar-inner" style="width:90%"></div></div></div>
-          <div class="skills-bar"><span>JavaScript</span><div class="bar"><div class="bar-inner" style="width:80%"></div></div></div>
+          <div class="skills-bar"><span>HTML & CSS</span><div class="bar"><div class="bar-inner" style="width:60%"></div></div></div>
+          <div class="skills-bar"><span>JavaScript</span><div class="bar"><div class="bar-inner" style="width:40%"></div></div></div>
         </div>
         
 
@@ -210,12 +210,12 @@
       <h2>Experience</h2>
       <div class="cards">
         <div class="card">
-          <h3>Sys/Data Admin</h3>
+          <h3>Database Administrator</h3>
           <p><strong>Simbi Labs India</strong> | Jul 2023 - Present</p>
           <ul>
             <li>Led IT infrastructure management & data governance</li>
-            <li>Developed Python pipelines for data collection & analysis</li>
-            <li>Optimized website performance and SEO strategies</li>
+            <li>Developed Python pipelines for data collection / Manipulation / Creation & analysis</li>
+            <li>Database Upgrades and Maintenance, Security Management</li>
           </ul>
         </div>
       </div>
@@ -287,7 +287,7 @@
       <h3><br>Data Recovery App</h3>
 
       <!-- date in top-right -->
-      <div class="date-meta">Self<br></div>
+      <div class="date-meta">Self built<br></div>
 
       <h4>Recovery of Lost/Deleted data in Server</h4>
       <ul>
@@ -314,7 +314,7 @@
       <h3><br>Fully Automated form filling</h3>
 
       <!-- date in top-right -->
-      <div class="date-meta">Self | KoboToolbox<br></div>
+      <div class="date-meta">Self built | KoboToolbox<br></div>
 
       <h4>Automated Form Filling Using Selenium</h4>
       <ul>
@@ -464,6 +464,7 @@
         <a href="mailto:riteshrajpoot0007@gmail.com" class="btn">Email</a>
         <a href="https://www.linkedin.com/in/ritesh-dangi-4a4612273/" class="btn">LinkedIn</a>
         <a href="https://github.com/GITBoy-from-mars" class="btn">GitHub</a>
+        <a href="https://docs.google.com/document/d/1ra5P5iIDDgqAZtblxHFDylIwYiCC5fqg476ulJr-kkM/edit?usp=sharing" class="btn desktop-only-btn">My CV</a>
       </div>
     </section>
   </main>
@@ -568,7 +569,7 @@
   document.addEventListener('DOMContentLoaded', () => {
     const nav = document.querySelector('nav');
     const resumeBtn = document.createElement('a');
-    resumeBtn.href = 'your-resume-link.pdf';
+    resumeBtn.href = 'https://docs.google.com/document/d/1ra5P5iIDDgqAZtblxHFDylIwYiCC5fqg476ulJr-kkM/edit?usp=sharing';
     resumeBtn.id = 'mobile-resume-btn';
     resumeBtn.textContent = 'See My Resume';
     resumeBtn.classList.add('btn');
@@ -580,6 +581,20 @@
   @media (min-width: 732px) {
     .intro img {
       max-width: 420px !important;
+    }
+  }
+</style>
+
+
+
+<style>
+  .desktop-only-btn {
+    display: inline-block;
+  }
+
+  @media (max-width: 732px) {
+    .desktop-only-btn {
+      display: none !important;
     }
   }
 </style>
