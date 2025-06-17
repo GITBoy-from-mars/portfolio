@@ -6,8 +6,6 @@
   <title>Ritesh | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
   <style>
-  
-  
               .project-card {
       position: relative; /* allow children to be positioned against this */
       /* …existing styles… */
@@ -23,6 +21,8 @@
       font-style: italic;
       font-size: 0.85rem;
       color: #555; 
+      
+
       
     }
 
@@ -109,9 +109,24 @@
     width: 100%;
     max-width: 320px;
     position: relative;
-  }  
+ 
+ }  
+ 
 }
   </style>
+   
+   
+<style>
+  @media (min-width: 732px) {
+    #projects .cards {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+  }
+  
+</style>
+
+
+
 </head>
 <body>
   <header>
@@ -122,7 +137,9 @@
         <li><a href="#skills">Skills</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#contact">Contact</a></li> 
+        <li class="mobile-only resume-btn"><a href="/path/to/your_resume.pdf" target="_blank">See My Resume</a> </li>
       </ul>
     </nav>
   </header>
@@ -209,7 +226,7 @@
 
     <section id="projects">
       <h2>Projects Showcase</h2>
-      <div class="cards">
+      <div class="cards cards-two-col">
         
         
         
@@ -229,8 +246,6 @@
         <li>Error Handling: Logs issues and handles missing tools or data gracefully.</li>
         <li>Analysis-Ready Output: Produces clean, structured data for insights.</li>
       </ul>
-
-
       <div class="meta">
         <h5>
           <i>
@@ -240,7 +255,6 @@
         </h5>
       </div>
     </div>
-    
     
     
     
@@ -259,8 +273,6 @@
         <li>Built for Researchers: Developed during your fellowship to streamline repetitive SPSS prep.</li>
         <li>Web-Integrated</li>
       </ul>
-
-
       <div class="meta">
         <h5>
           <i>
@@ -272,39 +284,29 @@
       </div>
     </div>
     
-    
-    
-    
-    
-    
-    
-        
-       
+
  
      <div class="card project-card">
       <h3><br>Data Recovery App</h3>
 
       <!-- date in top-right -->
-      <div class="date-meta">AICTE amd EDUSKILLS| Feb 2024 – Mar 2024<br></div>
+      <div class="date-meta">Self<br></div>
 
-      <h4>Gender‑Based Analysis (Python)</h4>
+      <h4>Recovery of Lost/Deleted data in Server</h4>
       <ul>
-        <li>Doctor Visits: Analyzed frequency by gender</li>
-        <li>Illness Symptoms: Identified common symptoms for men vs. women</li>
+        <li>Recovered data from deleted KoboToolbox Server</li>
+        <li>Built Android app using Python (via Chaquopy).</li>
+        <li>Used Dropbox API for cloud storage.</li>
+        <li>Handled XML parsing for form data recovery.</li>
+        <li>Offline backup ensured safe data restoration.</li>
       </ul>
-      <h4>Age‑Based Analysis (Python)</h4>
-      <ul>
-        <li>Healthcare Visits: Frequency across age groups</li>
-        <li>Doctor Visits: Visit frequency by age</li>
-        <li>Illness Symptoms: Age‑specific symptom prevalence</li>
-      </ul>
-
+      
       <div class="meta">
         <h5>
           <i>
-            Software: Python, Pandas, NumPy, Matplotlib, Seaborn<br>
-            Editor: Jupyter Notebook<br><br></i>
-           <a href="https://github.com/GITBoy-from-mars/Automated-Form-filling" class="btn">GitHub</a>
+            Software: Android Studio, Python, xml<br>
+            Editor: Jupyter Notebook, Android Studio, VS code<br><br></i>
+           <a href="https://github.com/GITBoy-from-mars/Lost-Data-Collecting-recovery-app" class="btn">GitHub</a>
         </h5>
       </div>
     </div>
@@ -312,40 +314,35 @@
  
  
      <div class="card project-card">
-      <h3><br>Data Recovery App</h3>
+      <h3><br>Fully Automated form filling</h3>
 
       <!-- date in top-right -->
-      <div class="date-meta">AICTE amd EDUSKILLS| Feb 2024 – Mar 2024<br></div>
+      <div class="date-meta">Self | KoboToolbox<br></div>
 
-      <h4>Gender‑Based Analysis (Python)</h4>
+      <h4>Automated Form Filling Using Selenium</h4>
       <ul>
-        <li>Doctor Visits: Analyzed frequency by gender</li>
-        <li>Illness Symptoms: Identified common symptoms for men vs. women</li>
-      </ul>
-      <h4>Age‑Based Analysis (Python)</h4>
-      <ul>
-        <li>Healthcare Visits: Frequency across age groups</li>
-        <li>Doctor Visits: Visit frequency by age</li>
-        <li>Illness Symptoms: Age‑specific symptom prevalence</li>
+        <li>Automates Form Filling using Selenium with data from Excel or Google Sheets </li>
+        <li>Chromedriver-Based: Opens the form, handles login if required.</li>
+        <li>Dynamic Field Detection: Matches input fields with corresponding data.</li>
+        <li>Handles Popups: Submits forms and manages duplicates automatically.</li>
+        <li>Scales Easily: Tested with 1,500+ questions and 50 lakh+ entries.</li>
+        <li>I uses the form of KoboToolbox</li>
       </ul>
 
       <div class="meta">
         <h5>
           <i>
-            Software: Python, Pandas, NumPy, Matplotlib, Seaborn<br>
-            Editor: Jupyter Notebook<br><br></i>
+            Software: Selenium, APIs, Google Sheet, MS Excel, WebDriver<br>
+            Editor: Jupyter Notebook, VS Code<br><br></i>
            <a href="https://github.com/GITBoy-from-mars/Automated-Form-filling" class="btn">GitHub</a>
         </h5>
       </div>
     </div>
     
-    
-    
 
-        <!-- Project 1 -->
     <div class="card project-card">
-      <h3>Healthcare Analytics for Doctor Visits</h3>
-      <div class="date-meta">AICTE &amp; VIOS for Tech | February 2024 – March 2024</div>
+      <h3><br>Healthcare Analytics for Doctor Visits</h3>
+      <div class="date-meta">AICTE &amp; VIOS for Tech | February 2024 – March 2024<br><br></div>
 
       <h4>Gender‑Based Analysis (Python)</h4>
       <ul>
@@ -362,16 +359,16 @@
 
       <div class="meta">
         <h5><i>
-          Software: Python, Pandas, Seaborn, NumPy, Matplotlib<br>
+          Software: Python, Pandas, Seaborn, NumPy, Matplotlib<br><br>
           Editor: Jupyter Notebook<br><br></i>
            <a href="https://github.com/GITBoy-from-mars/Automated-Form-filling" class="btn">GitHub</a></h5>
       </div>
     </div>
 
-    <!-- Project 2 -->
+
     <div class="card project-card">
-      <h3>AI‑Powered Chatbot</h3>
-      <div class="date-meta">IBM Skillbuild – AI/CLOUD | June 2024 – July 2024</div>
+      <h3><br>AI‑Powered Chatbot</h3>
+      <div class="date-meta">IBM Skillbuild – AI/CLOUD | June 2024 – July 2024<br></div>
 
       <p>
         Developed and implemented an AI‑powered chatbot using IBM Watsonx Studio on an
@@ -390,8 +387,8 @@
 
     <!-- Project 3 -->
     <div class="card project-card">
-      <h3>Crypto Trends Analysis</h3>
-      <div class="date-meta">AICTE &amp; VIOS for Tech | February 2024 – March 2024</div>
+      <h3><br>Crypto Trends Analysis</h3>
+      <div class="date-meta">AICTE &amp; VIOS for Tech | February 2024 – March 2024<br></div>
 
       <ul>
         <li>Market Trends: Analyzed overall trends and patterns in the cryptocurrency market</li>
@@ -407,10 +404,10 @@
       </div>
     </div>
 
-    <!-- Project 4 -->
+
     <div class="card project-card">
-      <h3>Zero Energy Buildings Feasibility Study</h3>
-      <div class="date-meta">BTIRT (College Project)</div>
+      <h3><br>Zero Energy Buildings Feasibility Study</h3>
+      <div class="date-meta">College Project<br></div>
 
       <p>This project studied Zero Energy Buildings (ZEBs) and Passive Solar Buildings (PSBs) to assess their practicality in resource‑limited areas, covering:</p>
       <ul>
@@ -428,32 +425,46 @@
     </div>
 
 
- 
- 
- 
- 
- 
- 
-        
-        
+    </section>
+    
+    
+    
+    
+
+    <section id="achievements">
+      <h2>Achievements</h2>
+      <div class="cards">
         <div class="card">
-          <h3>Form Automation</h3>
-          <p>Selenium-based automation for MS Word & web forms</p>
-          <a href="https://github.com/GITBoy-from-mars/Automated-Form-filling" class="btn">GitHub</a>
-        </div>
-        <div class="card">
-          <h3>Word to PDF Converter</h3>
-          <p>PyQt5 application with watermark & header support</p>
-          <a href="https://github.com/GITBoy-from-mars/Word-to-pdf-conversion" class="btn">GitHub</a>
+          <h3>Certificates</h3>
+         <p><li>Microsoft (LinkedIn) – Microsoft 365 Co-pilot | <i>Jul 2024</i></li></p>
+        <p><li>EduSkills – Alteryx Data Analytics Process Automation Internship | <i>Sep 2024</i></li></p>
+        <p><li>SWAYAM – Structured Query Language (SQL) | <i>Aug 2024</i></li></p>
+        <p><li>IBM (Edunet) – Emerging Technology AI/Cloud | <i>Jun 2024</i></li></p>
+        <p><li>IBM – Artificial Intelligence | <i>Jun 2024</i></li></p>
+        <p><li>IBM – Enterprises Data Science | <i>Jun 2024</i></li></p>
+        <p><li>IBM – Enterprises Grade AI | <i>Jun 2024</i></li></p>
+        <p><li>Google (Eduskills) – AI/ML Internship Certification | <i>Apr 2024</i></li></p>
+        <p><li>Simbi Labs India – Python Programming Basic to Advance (Project Based) | <i>Apr 2024</i></li></p>
+        <p><li>AICTE (VOIS) – Data Analytics and Power BI | <i>Mar 2024</i></li></p>
+        <p><li>AICTE (Bentley) – Structural Analysis (STAAD.pro) | <i>Mar 2024</i></li></p>
+        <p><li>Simbi Labs India – Lean Six Sigma Green Belt Program | <i>Nov 2023</i></li></p>
+        <p><li>Simbi Labs India – Web Design and Development | <i>Sep 2023</i></li></p>
+        <p><li>Simbi Labs India – Database Management System and SQL | <i>Jul 2023</i></li></p>
+        <p><li>Simbi Labs India – Course in MS Excel and Automation | <i>May 2023</i></li></p>
+        <p><li>Simbi Labs India – Digital Marketing and Advertising Intern | <i>Jan 2023</i></li></p>
+          
         </div>
       </div>
     </section>
+    
+    
+    
 
     <section id="contact" class="contact">
       <h2>Get In Touch</h2>
       <p style="text-align:center; margin-bottom:1rem;">Let's collaborate on impactful projects or discuss new opportunities.</p>
       <div class="grid">
-        <a href="mailto:riteshrajpoot0007@gmail.com" class="btn">Email Me</a>
+        <a href="mailto:riteshrajpoot0007@gmail.com" class="btn">Email</a>
         <a href="https://www.linkedin.com/in/ritesh-dangi-4a4612273/" class="btn">LinkedIn</a>
         <a href="https://github.com/GITBoy-from-mars" class="btn">GitHub</a>
       </div>
@@ -461,7 +472,7 @@
   </main>
 
   <footer>
-    <p>&copy; 2025 Ritesh Dangi. Crafted with Passion &amp; Precision.</p>
+    <p>&copy; 2025 Ritesh. Crafted with Passion &amp; Precision.</p>
   </footer>
 
   <script>
@@ -539,6 +550,35 @@
     const heading = intro.querySelector('.text h1');
     heading.insertAdjacentElement('afterend', mobileCopy);
   });
+  
 </script>
+
+<style>
+  @media (max-width: 731px) {
+    #mobile-resume-btn {
+      display: inline-block;
+    }
+  }
+
+  @media (min-width: 732px) {
+    #mobile-resume-btn {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const nav = document.querySelector('nav');
+    const resumeBtn = document.createElement('a');
+    resumeBtn.href = 'your-resume-link.pdf';
+    resumeBtn.id = 'mobile-resume-btn';
+    resumeBtn.textContent = 'See My Resume';
+    resumeBtn.classList.add('btn');
+    nav.appendChild(resumeBtn);
+  });
+</script>
+
+
 </body>
 </html>
