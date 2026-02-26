@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gitboy-from-mars.github.io/portfolio/sitemap.xml
